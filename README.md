@@ -45,10 +45,10 @@ ${THISDIR}/remotes/${DEVICENAME}/${DEVICENAME}-{${COMMAND}.conf
 Use the ir-ctl command to learn sequences - example:
 
 For single button presses
-# ir-ctl -1 -d /dev/lirc1 -r./fsr78/fsr78-power.conf
+ir-ctl -1 -d /dev/lirc1 -r./fsr78/fsr78-power.conf
 
 For longer sequences - Will be played back exactly as sent including delays
-# ir-ctl -d /dev/lirc1 -r./fsr78/fsr78-power.conf
+ir-ctl -d /dev/lirc1 -r./fsr78/fsr78-power.conf
 Use Ctrl-C to stop
 
 In both cases, there is no understanding of the actual sequence.
