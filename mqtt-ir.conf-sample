@@ -1,0 +1,27 @@
+# MQTT Configuration
+MQTT_CAFILE=$MYDIR/easyrsa-ca.crt
+MQTT_HOST=mqtt.example.com
+MQTT_PASSWORD=not_a_real_password
+MQTT_PORT=8883
+MQTT_USERNAME=mqtt2ir
+[ -z "$MQTT_TOPIC" ] && MQTT_TOPIC=home/mqtt-ir/someroom/soundbar
+
+# Need write access to IR transmit device
+IR_DEVICE=/dev/lirc0
+IR_CTL="ir-ctl -d$IR_DEVICE"
+# With sudo - Sudo must be configured correctly for account running mqtt-ir
+# IR_CTL="sudo ir-ctl -d$IR_DEVICE"
+
+[ -z "$IR_SEND_DIR" ] && IR_SEND_DIR=$MYDIR/remotes
+
+# Default delay between commands, in seconds
+# If no default delay is required, set the value to "0" (numeric zero)
+DELAY_XMIT=0.2
+
+# Used when running the ir-xmit command on a different host
+# REMOTE_HOST=picoreplayer
+# [ -z "$REMOTE_USER" ] && REMOTE_USER=tc
+# REMOTE_IDENTITY="$MYDIR/.ssh/id_$REMOTE_HOST"
+# REMOTE_DIR="/home/$REMOTE_USER/mqtt-ir"
+
+VERBOSE=

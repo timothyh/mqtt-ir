@@ -1,0 +1,14 @@
+[Unit]
+Description=Start MQTT to IR Blaster
+After=network.target
+
+[Service]
+User=mqtt2ir
+ExecStart=/opt/mqtt-ir/mqtt-ir.sh
+WorkingDirectory=/opt/mqtt-ir
+Type=simple
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
