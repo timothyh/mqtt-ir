@@ -1,2 +1,2 @@
 # mqtt-ir
-IR Transmitter using MQTT
+Shell script IR blaster using MQTT messages
