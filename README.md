@@ -21,7 +21,7 @@ See below for installation instructions.
 
 You'll also need to learn some sequences, again see below
 
-Once configured, sequences can be transmitted by publisng on the configured
+Once configured, sequences can be transmitted by publishing on the configured
 topic:
 ```
 mosquitto_pub -h mqtt.example.com -t home/mqtt-ir/someroom/soundbar \
